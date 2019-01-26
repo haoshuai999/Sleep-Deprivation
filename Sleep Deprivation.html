@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html>
+<head class="no-skrollr">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>First version</title>
+
+    <style type="text/css">
+        img{border:0;-ms-interpolation-mode:bicubic;position:absolute}
+        body{margin:0;font-family:'Ubuntu';font-weight:300;font-style:normal;color:#3d3d3d;width:100%;height:100%}
+        .scene{position:fixed;width:100%;height:100%;z-index: 0}
+        .nav{position:fixed;width:100%;height:45px;z-index: 0}
+        .vid0{position:absolute;overflow:hidden;width:600px;height:500px;bottom:0;left:0;z-index: 1000}
+        .vid1{position:absolute;overflow:hidden;width:1200px;height:600px;top:400;bottom:0;left:0;z-index: 1000}
+        .vid2{position:absolute;overflow:hidden;bottom:0;left:0}
+        .vid3{position:absolute;overflow:hidden;bottom:0;left:0}
+        .vid4{position:absolute;overflow:hidden;bottom:0;left:0}
+        .vid5{position:absolute;overflow:hidden;width:800px;height:450px;bottom:0;left:0}
+        .vid6{position:absolute;overflow:hidden;width:500px;height:600px;bottom:0;left:750px}
+        .vid7{position:absolute;overflow:hidden;width:600px;height:600px;bottom:0;left:750px}
+        .vid8{position:absolute;overflow:hidden;bottom:0;left:0}
+        .vidtran{position:absolute;overflow:hidden;top:368px}
+        img{max-width: 1366px;max-height: 768px}
+        img.bookstore{z-index: -100}
+        img.fourthpage{max-width: 1366px;max-height: 900px}
+        img.word3{max-width: 1366px;max-height: 900px}
+        img.word4{max-width: 1366px;max-height: 900px}
+        img.fifthpage{max-width: 1366px;max-height: 900px}
+        img.netcoffee2{width: 1366px;height: 768px}
+        img.people4{width: 1366px;height: 768px}
+        img.pillar3{width: 1366px;height: 768px}
+        img.seventhpage{width: 1366px;height: 768px}
+        img.eighthpage{width: 1366px;height: 768px}
+        img.white{width: 1366px;height: 768px}
+        img.brand{width: 1366px;height: 768px}
+        img.movie1{width: 1366px;height: 768px}
+        img.movie2{width: 1366px;height: 768px}
+        img.dummy{width: 1366px;height: 768px}
+        img.word10{width: 1366px;height: 768px}
+        img.beauty{width: 1366px;height: 768px}
+        img.screen{width: 1366px;height: 768px}
+        img.paul{width: 1366px;height: 768px}
+        img.crowd1{width: 1366px;height: 768px}
+        img.crowd2{width: 1366px;height: 768px}
+        img.computer{width: 1366px;height: 768px}
+        img.transition0{width: 1366px;max-height: 768px; z-index: 1000}
+        img.transition1{width: 1366px;max-height: 768px; z-index: 1000}
+        img.transition2{z-index: 2000}
+        img.chinamap{width: 400px;height: 280px}
+        img.fly{width: 400px;height: 280px}
+        img.asmr{z-index: 2000}
+        img.cars{z-index: 2000}
+        img.word17{z-index: 2001}
+        map.Maptran1{z-index: 3000}
+        img.line{top: 2px}
+        img.article{position: relative;z-index: 1000}
+        ul{
+            position: relative;
+            text-align: center;
+            list-style-type: none;
+            width: 1360px;
+            height: 30px;
+            margin: 0;
+            padding-bottom: 15px;
+            z-index: 3000
+        }
+        li
+        {
+            color: white;
+            padding-top: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border: 1px solid #e7e7e7;
+            border-color: white;
+            display: inline-block;
+        }
+        #Num{
+            position: absolute;
+            font-size: 60px;
+            font-family: 'Big Caslon';
+            text-align: center;
+            margin: auto;
+            top: 300px;
+            left: 100px;
+            right: 0;
+            bottom: 0;
+            color: white
+        }
+        #article{
+            border: 0;
+            margin-left: 100px;
+            margin-top: 150px;
+            overflow: auto;
+            width: 1050px;
+            height: 550px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="skrollr-body">
+
+            <audio id="bgm" src="EntireBGM.mp3" preload="auto" loop></audio>
+            <audio id="mcdbgm" src="McDBGM.mp3" preload="auto" loop></audio>
+            
+            <!-- Scene 0: Taxicome -->
+            <div class="scene"
+                data-3000="top: 0%" 
+                data-4000="top: -100%; display: block;"
+                data-4001="display: none;"
+            >
+                <video id="videofullfirst" src="InitialTaxi.webm" width="1366" height="768" type="video/webm" preload="auto"></video>
+            </div>
+            <!-- Scene 1: Frontpage -->
+            <div class="scene" id="firstpart"
+                data-3000="top: 100%;"
+                data-4000="top: 0%"
+                data-6000="top: 0%" 
+                data-7000="top: -100%; display: block;"
+                data-7001="display: none;"
+            >
+            	<img src="1_pageone/material/01-b.png" alt="firstpage" class="firstpage">
+            	<img src="1_pageone/material/01-a.png" alt="word0" class="word0"
+            						data-4000="top: 5%; opacity: 0;"
+            						data-5000="top: 0%; opacity: 1;"
+            	>
+            </div>
+            <div class="scene"
+                data-6000="top: 100%;"
+                data-7000="top: 0%" 
+                data-9000="left: 0%"
+                data-10366="left: -100%; display: block;"
+                data-10367="display: none;"
+            >
+            	<img src="1_pageone/material/02-a.png" alt="bookstore" class="bookstore">
+            	<img src="1_pageone/material/02-b.png" alt="chair" class="chair"
+            						data-7000="left: 0%;"
+            						data-9000="left: -10%;"
+            	>
+            	<img src="1_pageone/material/02-c.png" alt="earth" class="earth"
+            						data-7000="left: 0%;"
+            						data-9000="left: -5%;"
+            	>
+            	<img src="1_pageone/material/02-d.png" alt="book" class="book"
+            						data-7000="left: 0%;"
+            						data-9000="left: 10%;"
+            	>
+				<div class="vid0"
+            		data-7000="left: 0%;"
+            		data-9000="left: 10%;"
+            	>
+            		<video id="video0" src="1_pageone/material/02-e.webm" type="video/webm" preload="auto" width="600" height="500" loop></video>
+            	</div>
+                    
+            </div>
+        	<div class="scene"
+                data-9000="left: 100%;"
+                data-10366="left: 0%" 
+                data-12000="display: block;"
+                data-13001="display: none;"
+            >
+            	<video id="videofull0" src="1_pageone/material/04.webm" type="video/webm" preload="auto" loop></video>
+        	</div>
+            <div class="scene"
+                data-8999="display: none;"
+                data-9000="left: -2%; display: block;"
+                data-10366="left: -30%" 
+                data-10367="display: none;"
+            >
+                <img id="photo0" src="1_pageone/material/03.jpg" alt="transition0" class="transition0" display="none">
+            </div>
+        	<div class="scene"
+                data-12000="top: 100%;"
+                data-13000="top: 0%" 
+                data-15000="left: 0%"
+                data-16000="left: -100%; display: block;"
+                data-16001="display: none;"
+            >
+            	<img src="1_pageone/material/05-a.png" alt="bookstore2" class="bookstore2">
+            	<img src="1_pageone/material/05-b.png" alt="shelf" class="shelf"
+            						data-13000="left: 0%;"
+            						data-15000="left: -10%;"
+            	>
+            	<img src="1_pageone/material/05-c.png" alt="people1" class="people1"
+            						data-13000="left: 0%;"
+            						data-15000="left: -5%;"
+            	>
+                <audio id="audio0" src="1_pageone/material/05.mp3"></audio>
+        	</div>
+        	<div class="scene"
+                data-15000="left: 100%;"
+                data-16000="left: 0%" 
+                data-19000="left: 0%"
+                data-20000="left: -100%; display: block;"
+                data-20001="display: none;"
+            >
+            	<img src="1_pageone/material/06-b.png" alt="secondpage" class="secondpage">
+            	<img src="1_pageone/material/06-a.png" alt="word1" class="word1"
+            						data-16000="top: 5%; opacity: 0;"
+            						data-18000="top: 0%; opacity: 1;"
+            	>
+            </div>
+            <div class="scene" 
+                data-14999="display:none;"
+                data-15000="left: 0%; display: block;"
+                data-16000="left: -100%;"
+                data-16001="display: none;"
+            >
+                <img src="1_pageone/material/transition.png" alt="pillar" class="pillar"
+                                    data-15000="left: 55%;"
+                                    data-16000="left: 35%;"
+                >
+            </div>
+            <!-- Scene 2: Mcdonald -->
+            <div class="scene"
+                data-19000="left: 100%;"
+                data-20000="left: 0%" 
+                data-23000="top: 0%"
+                data-24000="top: -100%; display: block;"
+                data-24001="display: none;"
+            >
+            	<img src="2_mcdonald/material/01-b.png" alt="thirdpage" class="thirdpage">
+            	<img src="2_mcdonald/material/01-a.png" alt="word2" class="word2"
+            						data-20000="top: 5%; opacity: 0;"
+            						data-22000="top: 0%; opacity: 1;"
+            	>
+            </div>
+            <div class="scene"
+                data-23000="top: 100%;"
+                data-24000="top: 0%" 
+                data-26000="left: 0%"
+                data-27000="left: -100%; display: block;"
+                data-27001="display: none;"
+            >
+            	<img src="2_mcdonald/material/02-a.png" alt="mcdonald" class="mcdonald">
+            	<img src="2_mcdonald/material/02-b.png" alt="sign" class="sign"
+            						data-24000="left: 0%;"
+            						data-26000="left: -2%;"
+            	>
+            	<img src="2_mcdonald/material/02-c.png" alt="uncle" class="uncle"
+            						data-24000="left: 0%;"
+            						data-26000="left: 5%;"
+            	>
+            	<img src="2_mcdonald/material/02-d.png" alt="pillar2" class="pillar2"
+            						data-24000="left: 5%;"
+            						data-26000="left: 0%;"
+            	>
+            	<img src="2_mcdonald/material/02-e.png" alt="pie" class="pie"
+            						data-24000="left: 0%;"
+            						data-26000="left: -3%;"
+            	>
+            	<img src="2_mcdonald/material/02-f.png" alt="people2" class="people2"
+            						data-24000="left: 0%;"
+            						data-26000="left: 6%;"
+            	>
+            </div>
+            <div class="scene"
+                data-26000="left: 100%;"
+                data-27000="left: 0%" 
+                data-29000="display: block;"
+                data-30001="display: none;"
+            >
+            	<video id="videofull1" src="2_mcdonald/material/03.webm" type="video/webm" preload="auto" loop></video>
+        	</div>
+        	<div class="scene"
+                data-29000="top: 100%;"
+                data-30000="top: 0%" 
+                data-33000="top: 0%"
+                data-34000="top: -100%; display: block;"
+                data-34001="display: none;"
+            >
+            	<img src="2_mcdonald/material/04-b.png" alt="fourthpage" class="fourthpage">
+            	<img src="2_mcdonald/material/04-a.png" alt="word3" class="word3"
+            						data-30000="top: 5%; opacity: 0;"
+            						data-32000="top: 0%; opacity: 1;"
+            	>
+            </div>
+            <!-- Scene 3: Netcoffee -->
+            <div class="scene"
+                data-33000="top: 100%;"
+                data-34000="top: 0%" 
+                data-37000="left: 0%"
+                data-38000="left: -100%; display: block;"
+                data-38001="display: none;"
+            >
+            	<img src="3_netcoffee/material/01-a.png" alt="fifthpage" class="fifthpage">
+            	<img src="3_netcoffee/material/01-b.png" alt="word4" class="word4"
+            						data-34000="top: 5%; opacity: 0;"
+            						data-36000="top: 0%; opacity: 1;"
+            	>
+            </div>
+            <div class="scene"
+                data-37000="left: 100%;"
+                data-38000="left: 0%" 
+                data-40000="left: 0%"
+                data-41000="left: -100%; display: block;"
+                data-41001="display: none;"
+            >
+            	<img src="3_netcoffee/material/02-a.png" alt="netcoffee" class="netcoffee">
+            	<img src="3_netcoffee/material/02-b.png" alt="forbid" class="forbid"
+            						data-38000="left: 0%;"
+            						data-40000="left: -5%;"
+            	>
+            	<img src="3_netcoffee/material/02-c.png" alt="freezer" class="freezer"
+            						data-36999="display: none;"
+                                    data-37000="display: block;"
+                                    data-38000="left: -3%;"
+            						data-40000="left: 0%;"
+            	>
+                <div class="vid1"
+                    data-36999="display: none;"
+                    data-37000="display: block;"
+                    data-38000="left: -15%;"
+                    data-39000="left: -5%;"
+                >
+                    <video id="video1" src="3_netcoffee/material/02-d.webm" type="video/webm" width="1200" height="600" preload="auto" loop></video>
+                </div>
+            </div>
+            <div class="scene"
+                data-40000="left: 100%;"
+                data-41000="left: 0%" 
+                data-43000="display: block;"
+                data-44001="display: none;"
+            >
+            	<video id="videofull2" src="3_netcoffee/material/03.webm" type="video/webm" preload="auto" loop></video>
+        	</div>
+        	<div class="scene"
+                data-43000="top: 100%;"
+                data-44000="top: 0%" 
+                data-46000="left: 0%"
+                data-47000="left: -100%; display: block;"
+                data-47001="display: none;"
+            >
+            	<img src="3_netcoffee/material/04-a.png" alt="netcoffee2" class="netcoffee2">
+            	<img src="3_netcoffee/material/04-c.png" alt="pillar3" class="pillar3"
+            						data-44000="left: 5%;"
+            						data-46000="left: 2%;"
+            	>
+                <div class="vid8"
+                    data-42999="display: none;"
+                    data-43000="display: block;"
+                    data-44000="left: -3%;"
+                    data-46000="left: 0%;"
+                >
+                    <video id="video8" src="3_netcoffee/material/04-b.webm" type="video/webm" preload="auto" loop></video>
+                </div>
+            </div>
+            <div class="scene"
+                data-46000="left: 100%;"
+                data-47000="left: 0%" 
+                data-49000="display: block;"
+                data-50001="display: none;"
+            >
+            	<video id="videofull3" src="3_netcoffee/material/05.webm" type="video/webm" preload="auto" loop></video>
+        	</div>
+        	<div class="scene"
+                data-49000="left: 100%;"
+                data-50000="left: 0%" 
+                data-52000="display: block;"
+                data-53001="display: none;"
+            >
+            	<video id="videofull4" src="3_netcoffee/material/06.webm" type="video/webm" preload="auto" loop></video>
+        	</div>
+        	<div class="scene"
+                data-52000="top: 100%;"
+                data-53000="top: 0%" 
+                data-56000="top: 0%"
+                data-57000="top: -100%; display: block;"
+                data-57001="display: none;"
+            >
+            	<img src="3_netcoffee/material/07-b.png" alt="sixthpage" class="sixthpage">
+            	<img src="3_netcoffee/material/07-a.png" alt="word5" class="word5"
+            						data-53000="top: 5%; opacity: 0;"
+            						data-55000="top: 0%; opacity: 1;"
+            	>
+            </div>
+            <!-- Scene 4: Onethird -->
+            <div class="scene"
+                data-56000="top: 100%;"
+                data-57000="top: 0%" 
+                data-60000="top: 0%"
+                data-61000="top: -100%; display: block;"
+                data-61001="display: none;"
+            >
+            	<img src="4_onethird/material/01-a.png" alt="seventhpage" class="seventhpage">
+            	<img src="4_onethird/material/01-b.png" alt="word6" class="word6"
+            						data-57000="top: 5%; opacity: 0;"
+            						data-59000="top: 0%; opacity: 1;"
+            	>
+            </div>
+            <div class="scene"
+                data-60000="top: 100%;"
+                data-61000="top: 0%" 
+                data-63000="display: block;"
+                data-64001="display: none;"
+            >
+            	<video id="videofull5" src="4_onethird/material/02.webm" type="video/webm" preload="auto" loop></video>
+        	</div>
+        	<div class="scene"
+                data-63000="top: 100%;"
+                data-64000="top: 0%" 
+                data-67000="top: 0%"
+                data-68000="top: -100%; display: block;"
+                data-68001="display: none;"
+            >
+            	<img src="4_onethird/material/03-b.png" alt="eighthpage" class="eighthpage">
+            	<img src="4_onethird/material/03-a.png" alt="word7" class="word7"
+            						data-64000="top: 5%; opacity: 0;"
+            						data-66000="top: 0%; opacity: 1;"
+            	>
+            </div>
+            <!-- Scene 5: Mwoods -->
+            <div class="scene"
+                data-67000="top: 100%;"
+                data-68000="top: 0%" 
+                data-71000="top: 0%"
+                data-72000="top: -100%; display: block;"
+                data-72001="display: none;"
+            >
+            	<img src="5_mwoods/material/01-a.png" alt="ninthpage" class="ninthpage">
+            	<img src="5_mwoods/material/01-b.png" alt="word8" class="word8"
+            						data-68000="top: 5%; opacity: 0;"
+            						data-70000="top: 0%; opacity: 1;"
+            	>
+            </div>
+            <div class="scene"
+                data-71000="top: 100%;"
+                data-72000="top: 0%" 
+                data-74000="left: 0%"
+                data-75366="left: -100%; display: block;"
+                data-75367="display: none;"
+            >
+            	<img src="5_mwoods/material/02-d.png" alt="screen" class="screen">
+            	<img src="5_mwoods/material/02-a.png" alt="crowd1" class="crowd1"
+            						data-72000="left: 0%;"
+            						data-74000="left: 5%;"
+            	>
+            	<img src="5_mwoods/material/02-b.png" alt="paul" class="paul"
+            						data-72000="left: 0%;"
+            						data-74000="left: -5%;"
+            	>
+            	<img src="5_mwoods/material/02-c.png" alt="crowd2" class="crowd2"
+            						data-72000="left: 0%;"
+            						data-74000="left: -5%;"
+            	>
+            </div>
+        	<div class="scene"
+                data-74000="left: 100%;"
+                data-75366="left: 0%" 
+                data-78000="left: 0%"
+                data-79000="left: -100%; display: block;"
+                data-79001="display: none;"
+            >
+            	<img src="5_mwoods/material/04-a.png" alt="screen" class="screen">
+                <div class="vid2"
+                    data-75366="left: -5%;"
+                    data-78000="left: 5%;"
+                >
+                    <video id="video2" src="5_mwoods/material/04-b.webm" type="video/webm" preload="auto" loop></video>
+                </div>
+            	<img src="5_mwoods/material/04-c.png" alt="word9" class="word9"
+            						data-75366="top: 5%;"
+            						data-78000="top: 0%;"
+            	>
+            </div>
+            <div class="scene"
+                data-73999="display: none;"
+                data-74000="left: -2%; display: block;"
+                data-75366="left: -30%"
+                data-75367="display: none;"
+            >
+                <img id="photo1" src="5_mwoods/material/03.jpg" alt="transition1" class="transition1" display="none">
+            </div>
+            <div class="scene"
+                data-78000="left: 100%;"
+                data-79000="left: 0%" 
+                data-82000="top: 0%"
+                data-83000="top: -100%; display: block;"
+                data-83001="display: none;"
+            >
+            	<img src="5_mwoods/material/05-h.png" alt="white" class="white"
+            						data-79000="left: 0%;"
+            						data-80000="left: -1%;"
+            	>
+            	<img src="5_mwoods/material/05-g.png" alt="night" class="night">
+            	<img src="5_mwoods/material/05-f.png" alt="brand" class="brand"
+            						data-79000="left: 0%;"
+            						data-80000="left: 3%;"
+            	>
+            	<div class="vid3">
+                    <video id="video3" src="5_mwoods/material/05-e.webm" type="video/webm" preload="auto" loop></video>
+                </div>
+                <div class="vid4">
+                    <video id="video4" src="5_mwoods/material/05-d.webm" type="video/webm" preload="auto" loop></video>
+                </div>
+            	<img src="5_mwoods/material/05-c.png" alt="dummy" class="dummy"
+            						data-79000="left: -2%;"
+            						data-80000="left: 2%;"
+            	>
+            	<img src="5_mwoods/material/05-b.png" alt="word10" class="word10"
+            						data-79000="left: 0%;"
+            						data-80000="left: -5%;"
+            	>
+            	<img src="5_mwoods/material/05-a.png" alt="beauty" class="beauty"
+            						data-79000="left: 0%;"
+            						data-80000="left: -3%;"
+            	>
+            </div>
+            <div class="scene" 
+                data-77999="display:none;"
+                data-78000="left: 0%;display: block;"
+                data-79000="left: -100%;"
+                data-79001="display: none;"
+            >
+            	<img src="5_mwoods/material/04-d.png" alt="transition2" class="transition2"
+            						data-78000="left: 25%;"
+            						data-79000="left: 15%;"
+            	>
+            </div>
+            <div class="scene"
+                data-82000="top: 100%;"
+                data-83000="top: 0%" 
+                data-86000="top: 0%"
+                data-87000="top: -100%; display: block;"
+                data-87001="display: none;"
+            >
+                <img src="5_mwoods/material/06-e.png" alt="house" class="house">
+                <img src="5_mwoods/material/06-d.png" alt="tags" class="tags"
+                                    data-83000="left: 2%;"
+                                    data-84000="left: 0%;"
+                >
+            	<img src="5_mwoods/material/06-b.png" alt="word11" class="word11"
+            						data-83000="top: 0%;"
+            						data-84000="top: -3%;"
+            	>
+            	<img src="5_mwoods/material/06-c.png" alt="frame" class="frame"
+            						data-83000="left: -2%;"
+            						data-84000="left: 0%;"
+            	>
+                <div class="vid5"
+                                    data-83000="left: -3%;"
+                                    data-84000="left: 0%;"
+                >
+                    <video id="video5" src="5_mwoods/material/06-a.webm" type="video/webm" width="800" height="450" preload="auto" loop></video>
+                </div>
+            </div>
+            <div class="scene"
+                data-86000="top: 100%;"
+                data-87000="top: 0%" 
+                data-90000="top: 0%"
+                data-91000="top: -50%; display: block;"
+                data-101001="display: none;"
+            >
+            	<img src="5_mwoods/material/07-a.png" alt="tenthpage" class="tenthpage">
+            	<img src="5_mwoods/material/07-b.png" alt="word12" class="word12"
+            						data-87000="top: 5%; opacity: 0;"
+            						data-89000="top: 0%; opacity: 1;"
+                                    data-91000="opacity: 0;"
+            	>
+            </div>
+
+            <!-- Transition of Part 1 and 2 -->
+            <div class="scene"
+                data-89999="display: none;"
+                data-90000="top: 57%; display: block;"
+                data-91000="top: 0%" 
+                data-100000="top: 0%"
+                data-101000="top: -100%; display: block;"
+                data-101001="display: none;"
+            >
+                <img src="transition/material/a.png" alt="moon" class="moon">
+                <img src="transition/material/b.png" alt="percent" class="percent"
+                                    data-91000="left: -2%;"
+                                    data-92000="left: 0%;"
+                                    data-93000="left: 2%;"
+                                    data-94000="left: 0%;"
+                                    data-95000="left: -2%;"
+                                    data-96000="left: 0%;"
+                                    data-97000="left: 2%;"
+                                    data-98000="left: 0%;"
+                                    data-99000="left: -2%;"
+                                    data-100000="left: 0%;"
+                >
+                <img src="transition/material/c.png" alt="up" class="up" 
+                                    data-91000="top: 2%;"
+                                    data-92000="top: 0%;"
+                                    data-93000="top: -2%;"
+                                    data-94000="top: 0%;"
+                                    data-95000="top: 2%;"
+                                    data-96000="top: 0%;"
+                                    data-97000="top: -2%;"
+                                    data-98000="top: 0%;"
+                                    data-99000="top: 2%;"
+                                    data-100000="top: 0%;"
+                >
+                <img src="transition/material/d.png" alt="down" class="down" usemap="#Maptran1" 
+                                    data-91000="top: -2%;"
+                                    data-92000="top: 0%;"
+                                    data-93000="top: 2%;"
+                                    data-94000="top: 0%;"
+                                    data-95000="top: -2%;"
+                                    data-96000="top: 0%;"
+                                    data-97000="top: 2%;"
+                                    data-98000="top: 0%;"
+                                    data-99000="top: -2%;"
+                                    data-100000="top: 0%;"
+                >
+                <map name="Maptran1" class="Maptran1">
+                    <area id="Map0" shape="rect" coords="400,200,500,300" />
+                    <area id="Map1" shape="rect" coords="800,350,950,450" />
+                </map>
+            </div>
+
+            <!-- Part 2 -->
+            <!-- Scene 1: ASMR -->
+            <div class="scene"
+                data-129999="display:none;"
+                data-130000="display:block;"
+                data-135000="left: 0%"
+                data-136000="left: -100%; display: block;"
+                data-136001="display: none;"
+            >
+                <img src="6_asmr/material/01-e.png" alt="computer" class="computer">
+                <img src="6_asmr/material/01-a.png" alt="cure" class="cure">
+                <img src="6_asmr/material/01-f.png" alt="gray0" class="gray0"
+                                    data-130000="top: 20%;"
+                                    data-130500="top: -3%;"
+                >
+                <div id="article">
+                    <img src="6_asmr/material/01-g.png" alt="article" class="article"
+                                        data-130500="opacity: 0;"
+                                        data-131000="opacity: 1;"
+                    >
+                </div>
+            </div>
+            <div class="scene"
+                data-100000="top: 100%;"
+                data-101000="top: 0%" 
+                data-130000="left: 0%"
+                data-131000="left: 100%; display: block;"
+                data-131001="display: none;"
+            >
+                <img src="6_asmr/material/01-d.png" alt="ear" class="ear">
+                <img src="6_asmr/material/01-h.png" alt="peonum" class="peonum"
+                                    data-101000="opacity: 0;"
+                                    data-101500="opacity: 1;"
+                >
+                <img src="6_asmr/material/2200.png" alt="2200" class="2200"
+                                    data-101000="opacity: 0;"
+                                    data-101500="opacity: 1;"
+                                    data-102500="opacity: 1; top: 0%;"
+                                    data-103000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/2215.png" alt="2215" class="2215"
+                                    data-102500="opacity: 0;"
+                                    data-103000="opacity: 1;"
+                                    data-104500="opacity: 1; top: 0%;"
+                                    data-105000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/2230.png" alt="2230" class="2230"
+                                    data-104500="opacity: 0;"
+                                    data-105000="opacity: 1;"
+                                    data-106500="opacity: 1; top: 0%;"
+                                    data-107000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/2245.png" alt="2245" class="2245"
+                                    data-106500="opacity: 0;"
+                                    data-107000="opacity: 1;"
+                                    data-108500="opacity: 1; top: 0%;"
+                                    data-109000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/2300.png" alt="2300" class="2300"
+                                    data-108500="opacity: 0;"
+                                    data-109000="opacity: 1;"
+                                    data-110500="opacity: 1; top: 0%;"
+                                    data-111000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/2315.png" alt="2315" class="2315"
+                                    data-110500="opacity: 0;"
+                                    data-111000="opacity: 1;"
+                                    data-112500="opacity: 1; top: 0%;"
+                                    data-113000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/2330.png" alt="2330" class="2330"
+                                    data-112500="opacity: 0;"
+                                    data-113000="opacity: 1;"
+                                    data-114500="opacity: 1; top: 0%;"
+                                    data-115000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/2345.png" alt="2345" class="2345"
+                                    data-114500="opacity: 0;"
+                                    data-115000="opacity: 1;"
+                                    data-116500="opacity: 1; top: 0%;"
+                                    data-117000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/0000.png" alt="0000" class="0000"
+                                    data-116500="opacity: 0;"
+                                    data-117000="opacity: 1;"
+                                    data-118500="opacity: 1; top: 0%;"
+                                    data-119000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/0015.png" alt="0015" class="0015"
+                                    data-118500="opacity: 0;"
+                                    data-119000="opacity: 1;"
+                                    data-120500="opacity: 1; top: 0%;"
+                                    data-121000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/0030.png" alt="0030" class="0030"
+                                    data-120500="opacity: 0;"
+                                    data-121000="opacity: 1;"
+                                    data-122500="opacity: 1; top: 0%;"
+                                    data-123000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/0045.png" alt="0045" class="0045"
+                                    data-122500="opacity: 0;"
+                                    data-123000="opacity: 1;"
+                                    data-124500="opacity: 1; top: 0%;"
+                                    data-125000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/100.png" alt="0100" class="0100"
+                                    data-124500="opacity: 0;"
+                                    data-125000="opacity: 1;"
+                                    data-126500="opacity: 1; top: 0%;"
+                                    data-127000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/115.png" alt="0115" class="0115"
+                                    data-126500="opacity: 0;"
+                                    data-127000="opacity: 1;"
+                                    data-128500="opacity: 1; top: 0%;"
+                                    data-129000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/130.png" alt="0130" class="0130"
+                                    data-128500="opacity: 0;"
+                                    data-129000="opacity: 1;"
+                                    data-130500="opacity: 1; top: 0%;"
+                                    data-131000="opacity: 0; top: -5%;"
+                >
+                <img src="6_asmr/material/01-b.png" alt="graph1" class="graph1"
+                                    data-101000="opacity: 0;"
+                                    data-101500="opacity: 1;"
+                >
+                <div id="Num"
+                                    data-101000="opacity: 0;"
+                                    data-101500="opacity: 1;"
+                >
+                </div>
+            </div>
+            <!-- Scene 2: Netcloud -->
+            <div class="scene"
+                data-135000="left: 100%;"
+                data-136000="left: 0%" 
+                data-139000="left: 0%"
+                data-140000="left: -100%; display: block;"
+                data-140001="display: none;"
+            > 
+                <img src="6_asmr/material/asmr-02.png" alt="asmr" class="asmr"
+                                    data-135000="left: 0%;"
+                                    data-136000="left: -50%;"
+                >
+                <img src="7_netcloud/material/01-d.png" alt="poster" class="poster">
+                <img src="7_netcloud/material/01-c.png" alt="gray1" class="gray1"
+                                    data-136000="left: -10%;opacity: 0;"
+                                    data-137500="left: 0%;opacity: 1;"
+                >
+                <img src="7_netcloud/material/01-b.png" alt="word14" class="word14"
+                                    data-137500="opacity: 0;"
+                                    data-138000="opacity: 1;"
+                >
+                <img src="7_netcloud/material/01-a.png" alt="album" class="album"
+                                    data-138000="left: 15%;"
+                                    data-139000="left: 10%;"
+                >
+            </div>
+            <div class="scene"
+                data-139000="left: 100%;"
+                data-140000="left: 0%" 
+                data-144000="left: 0%"
+                data-145000="left: -100%; display: block;"
+                data-145001="display: none;"
+            >
+                <img src="7_netcloud/material/02-b.png" alt="poster" class="poster">
+                <img src="7_netcloud/material/02-a.png" alt="word15" class="word15"
+                                    data-140000="top: 5%;opacity: 0;"
+                                    data-141000="top: 0%;opacity: 1;"
+                >
+                <img src="7_netcloud/material/02-c.png" alt="barrage0" class="barrage0"
+                                    data-140999="display: none;"
+                                    data-141000="left: 100%; display: block;"
+                                    data-143000="left: -80%;"
+                >
+                <img src="7_netcloud/material/02-d.png" alt="barrage1" class="barrage1"
+                                    data-140999="display: none;"
+                                    data-141000="left: 70%; display: block;"
+                                    data-143000="left: -85%;"
+                >
+                <img src="7_netcloud/material/02-e.png" alt="barrage2" class="barrage2"
+                                    data-140999="display: none;"
+                                    data-141000="left: 20%; display: block;"
+                                    data-143000="left: -110%;"
+                >
+                <img src="7_netcloud/material/02-f.png" alt="barrage3" class="barrage3"
+                                    data-140999="display: none;"
+                                    data-142000="left: 100%; display: block;"
+                                    data-144000="left: -60%;"
+                >
+                <img src="7_netcloud/material/02-g.png" alt="barrage4" class="barrage4"
+                                    data-140999="display: none;"
+                                    data-141000="left: 75%; display: block;"
+                                    data-143000="left: -100%;"
+                >
+                <img src="7_netcloud/material/02-h.png" alt="barrage5" class="barrage5"
+                                    data-140999="display: none;"
+                                    data-142000="left: 65%; display: block;"
+                                    data-144000="left: -60%;"
+                >
+                <img src="7_netcloud/material/02-i.png" alt="barrage6" class="barrage6"
+                                    data-140999="display: none;"
+                                    data-141500="left: 55%; display: block;"
+                                    data-143500="left: -65%;"
+                >
+                <img src="7_netcloud/material/02-j.png" alt="barrage7" class="barrage7"
+                                    data-140999="display: none;"
+                                    data-141500="left: 45%; display: block;"
+                                    data-143500="left: -85%;"
+                >
+                <img src="7_netcloud/material/02-k.png" alt="barrage8" class="barrage8"
+                                    data-140999="display: none;"
+                                    data-141500="left: 100%; display: block;"
+                                    data-143500="left: -40%;"
+                >
+                <img src="7_netcloud/material/02-l.png" alt="barrage9" class="barrage9"
+                                    data-140999="display: none;"
+                                    data-141000="left: 105%; display: block;"
+                                    data-143000="left: -25%;"
+                >
+                <img src="7_netcloud/material/02-m.png" alt="barrage10" class="barrage10"
+                                    data-140999="display: none;"
+                                    data-142000="left: 100%; display: block;"
+                                    data-144000="left: -35%;"
+                >
+                <img src="7_netcloud/material/02-n.png" alt="barrage11" class="barrage11"
+                                    data-140999="display: none;"
+                                    data-141000="left: 35%; display: block;"
+                                    data-143000="left: -120%;"
+                >
+                <img src="7_netcloud/material/02-o.png" alt="barrage12" class="barrage12"
+                                    data-140999="display: none;"
+                                    data-141500="left: 100%; display: block;"
+                                    data-143500="left: -25%;"
+                >
+                <img src="7_netcloud/material/02-p.png" alt="barrage13" class="barrage13"
+                                    data-140999="display: none;"
+                                    data-141500="left: 40%; display: block;"
+                                    data-143500="left: -100%;"
+                >
+                <img src="7_netcloud/material/02-q.png" alt="barrage14" class="barrage14"
+                                    data-140999="display: none;"
+                                    data-142000="left: 65%; display: block;"
+                                    data-144000="left: -80%;"
+                >
+                <img src="7_netcloud/material/02-r.png" alt="barrage15" class="barrage15"
+                                    data-140999="display: none;"
+                                    data-142500="left: 85%; display: block;"
+                                    data-144500="left: -50%;"
+                >
+                <img src="7_netcloud/material/02-s.png" alt="barrage16" class="barrage16"
+                                    data-140999="display: none;"
+                                    data-142500="left: 120%; display: block;"
+                                    data-144500="left: -100%;"
+                >
+                <img src="7_netcloud/material/02-t.png" alt="barrage17" class="barrage17"
+                                    data-140999="display: none;"
+                                    data-142000="left: 60%; display: block;"
+                                    data-144000="left: -95%;"
+                >
+                <img src="7_netcloud/material/02-u.png" alt="barrage18" class="barrage18"
+                                    data-140999="display: none;"
+                                    data-142500="left: 10%; display: block;"
+                                    data-144500="left: -130%;"
+                >
+            </div>
+            <!-- Scene 3: Didi -->
+            <div class="scene"
+                data-144000="left: 100%;"
+                data-145000="left: 0%" 
+                data-149000="left: 0%"
+                data-150000="left: -100%; display: block;"
+                data-150001="display: none;"
+            >
+                <img src="8_didi/material/01-a.png" alt="bridge" class="bridge">
+                <img src="8_didi/material/01-b.png" alt="taxi" class="taxi"
+                                    data-145000="left: 15%;"
+                                    data-146000="left: 0%;"
+                >
+                <img src="8_didi/material/01-c.png" alt="taxi_brand" class="taxi_brand"
+                                    data-145000="left: 15%;"
+                                    data-146000="left: 0%;"
+                >
+                <img src="8_didi/material/01-d.png" alt="gray2" class="gray2"
+                                    data-146000="left: -10%;opacity: 0;"
+                                    data-146500="left: 0%;opacity: 1;"
+                >
+                <img src="8_didi/material/01-e.png" alt="caption0" class="caption0"
+                                    data-146500="opacity: 0;"
+                                    data-147500="opacity: 1;"
+                >
+                <img src="8_didi/material/01-f.png" alt="caption1" class="caption1"
+                                    data-146500="opacity: 0;"
+                                    data-147500="opacity: 1;"
+                >
+                <img src="8_didi/material/01-g.png" alt="time" class="time"
+                                    data-146500="top: 40%;"
+                                    data-147500="top: 0%;"
+                >
+                <img src="8_didi/material/01-h.png" alt="word16" class="word16"
+                                    data-146500="top: 40%;"
+                                    data-147500="top: 0%;"
+                >
+                <img src="8_didi/material/01-h.gif" alt="chinamap" class="chinamap"
+                                    data-146500="opacity: 0; top: 50%; left: 5%;"
+                                    data-147500="opacity: 1;"
+                >
+                <img src="8_didi/material/01-i.gif" alt="fly" class="fly"
+                                    data-146500="opacity: 0; left: 5%;"
+                                    data-147500="opacity: 1;"
+                >                  
+            </div>
+            <div class="scene"
+                data-149000="left: 100%;"
+                data-150000="left: 0%" 
+                data-154000="top: 0%"
+                data-155000="top: -100%; display: block;"
+                data-155001="display: none;"
+            >
+                <img src="8_didi/material/02-a.png" alt="cars" class="cars"
+                                    data-149000="left: 0%;"
+                                    data-150000="left: -50%;"
+                >
+                <img src="8_didi/material/03-a.png" alt="wait" class="wait">
+                <img src="8_didi/material/03-b.png" alt="gray3" class="gray3"
+                                    data-150000="top: -30%;"
+                                    data-151000="top: 0%;"
+                >
+                <img src="8_didi/material/03-c.png" alt="graph2" class="graph2"
+                                    data-151000="opacity: 0;"
+                                    data-151500="opacity: 1;"
+                >
+                <img src="8_didi/material/03-d-1.png" alt="word18" class="word18"
+                                    data-151500="opacity: 0;"
+                                    data-152000="opacity: 1;"
+                >
+                <img src="8_didi/material/03-d-2.png" alt="word19" class="word19"
+                                    data-152000="opacity: 0;"
+                                    data-152500="opacity: 1;"
+                >
+                <img src="8_didi/material/03-d-3.png" alt="word20" class="word20"
+                                    data-152500="opacity: 0;"
+                                    data-153000="opacity: 1;"
+                >
+                <img src="8_didi/material/03-d-4.png" alt="word21" class="word21"
+                                    data-153000="opacity: 0;"
+                                    data-153500="opacity: 1;"
+                >
+                <img src="8_didi/material/03-e.png" alt="caption2" class="caption2"
+                                    data-151000="opacity: 0;"
+                                    data-151500="opacity: 1;"
+                >
+            </div>
+            <!-- Scene 3: Weibo -->
+            <div class="scene"
+                data-154000="top: 100%;"
+                data-155000="top: 0%" 
+                data-158000="top: 0%"
+                data-159000="top: -50%; display: block;"
+                data-169001="display: none;"
+            >
+                <img src="9_weibo/material/01-a.png" alt="iphone" class="iphone">
+                <img src="9_weibo/material/01-b.png" alt="headline" class="headline"
+                                    data-155000="top: 7%; opacity: 0;"
+                                    data-156000="top: 0%; opacity: 1;"
+                >
+                <img src="9_weibo/material/01-c.png" alt="graph3" class="graph3"
+                                    data-155000="top: 3%; opacity: 0;"
+                                    data-156000="top: 0%; opacity: 1;"
+                >
+            </div>
+
+            <!-- Transition of Part 2 and 3 -->
+            <div class="scene"
+                data-157999="display: none;"
+                data-158000="top: 50%; display: block;"
+                data-159000="top: 0%" 
+                data-168000="top: 0%"
+                data-169000="top: -100%; display: block;"
+                data-169001="display: none;"
+            >
+                <div class="vidtran">
+                    <video id="videofulltran" src="transition/material/Split23.webm" type="video/webm" preload="auto" loop></video>
+                </div>
+                <img src="transition/material/line.png" alt="line" class="line">
+                <img src="transition/material/arrow up.png" alt="up2" class="up2" 
+                                    data-159000="top: 2%;"
+                                    data-160000="top: 0%;"
+                                    data-161000="top: -2%;"
+                                    data-162000="top: 0%;"
+                                    data-163000="top: 2%;"
+                                    data-164000="top: 0%;"
+                                    data-165000="top: -2%;"
+                                    data-166000="top: 0%;"
+                                    data-167000="top: 2%;"
+                                    data-168000="top: 0%;"
+                >
+                <img src="transition/material/arrow down.png" alt="down2" class="down2" usemap="#Maptran2" 
+                                    data-159000="top: -2%;"
+                                    data-160000="top: 0%;"
+                                    data-161000="top: 2%;"
+                                    data-162000="top: 0%;"
+                                    data-163000="top: -2%;"
+                                    data-164000="top: 0%;"
+                                    data-165000="top: 2%;"
+                                    data-166000="top: 0%;"
+                                    data-167000="top: -2%;"
+                                    data-168000="top: 0%;"
+                >
+                <map name="Maptran2">
+                    <area id="Map2" shape="rect" coords="220,220,320,320" />
+                    <area id="Map3" shape="rect" coords="1100,350,1200,450" />
+                </map>
+            </div>
+
+            <!-- Part 3 -->
+            <div class="scene"
+                data-168000="top: 100%;"
+                data-169000="top: 0%" 
+                data-172000="left: 0%"
+                data-173000="left: -100%; display: block;"
+                data-173001="display: none;"
+            >
+                <img src="11_contrast/01/01background.png" alt="youngmale" class="youngmale">
+                <img src="11_contrast/01/01circle.png" alt="circle0" class="circle0"
+                                    data-169000="opacity: 0;"
+                                    data-169500="opacity: 1;"
+                >
+                <img src="11_contrast/01/01text.png" alt="text0" class="text0"
+                                    data-169500="opacity: 0;"
+                                    data-170000="opacity: 1;"
+                >
+            </div>
+            <div class="scene"
+                data-172000="left: 100%;"
+                data-173000="left: 0%" 
+                data-176000="left: 0%"
+                data-177000="left: -100%; display: block;"
+                data-177001="display: none;"
+            >
+                <img src="11_contrast/02/02background.png" alt="oldfemale" class="oldfemale">
+                <img src="11_contrast/02/02circle.png" alt="circle1" class="circle1"
+                                    data-173000="opacity: 0;"
+                                    data-173500="opacity: 1;"
+                >
+                <img src="11_contrast/02/02text.png" alt="text1" class="text1"
+                                    data-173500="opacity: 0;"
+                                    data-174000="opacity: 1;"
+                >
+            </div>
+            <div class="scene"
+                data-176000="left: 100%;"
+                data-177000="left: 0%" 
+                data-180000="left: 0%"
+                data-181000="left: -100%; display: block;"
+                data-181001="display: none;"
+            >
+                <img src="11_contrast/03/03background.png" alt="oldmale" class="oldmale">
+                <img src="11_contrast/03/03circle.png" alt="circle2" class="circle2"
+                                    data-177000="opacity: 0;"
+                                    data-177500="opacity: 1;"
+                >
+                <img src="11_contrast/03/03text.png" alt="text2" class="text2"
+                                    data-177500="opacity: 0;"
+                                    data-178000="opacity: 1;"
+                >
+            </div>
+            <div class="scene"
+                data-180000="left: 100%;"
+                data-181000="left: 0%" 
+                data-184000="left: 0%"
+                data-185000="left: -100%; display: block;"
+                data-185001="display: none;"
+            >
+                <img src="11_contrast/04/04background.png" alt="youngfemale" class="youngfemale">
+                <img src="11_contrast/04/04circle.png" alt="circle3" class="circle3"
+                                    data-181000="opacity: 0;"
+                                    data-181500="opacity: 1;"
+                >
+                <img src="11_contrast/04/04text.png" alt="text3" class="text3"
+                                    data-181500="opacity: 0;"
+                                    data-182000="opacity: 1;"
+                >
+            </div>
+            <!-- video part 1 -->
+            <div class="scene"
+                data-184000="left: 100%;"
+                data-185000="left: 0%" 
+                data-187000="top: 0%"
+                data-188000="top: -100%; display: block;"
+                data-188001="display: none;"
+            >
+                <img src="10_interview/00/00-a.png" alt="dark" class="dark">
+                <img src="10_interview/00/00-b.png" alt="mahui" class="mahui"
+                                    data-185000="opacity: 0;"
+                                    data-185500="opacity: 1;"
+                >
+            </div>
+            <div class="scene"
+                data-187000="top: 100%;"
+                data-188000="top: 0%" 
+                data-190500="top: 0%"
+                data-191500="top: -100%; display: block;"
+                data-191501="display: none;"
+            >
+                <img src="10_interview/01/01-a.png" alt="building" class="building">
+                <img src="10_interview/01/01-b.png" alt="9pm" class="9pm"
+                                    data-188000="opacity: 0;"
+                                    data-188500="opacity: 1;"
+                >
+                <img src="10_interview/01/01-c.png" alt="3am" class="3am"
+                                    data-189000="opacity: 0;"
+                                    data-189500="opacity: 1;"
+                >
+            </div>
+            <div class="scene"
+                data-190500="top: 100%;"
+                data-191500="top: 0%" 
+                data-193500="top: 0%"
+                data-194500="top: -100%; display: block;"
+                data-194501="display: none;"
+            >
+                <img src="10_interview/02/02-a.png" alt="working" class="working">
+                <img src="10_interview/02/02-b.png" alt="clock" class="clock"
+                                    data-191500="opacity: 0;"
+                                    data-192000="opacity: 1;"
+                >
+                <img src="10_interview/02/02-c.png" alt="word22" class="word22"
+                                    data-192000="top: 3%; opacity: 0;"
+                                    data-192500="top: 0%; opacity: 1;"
+                >
+            </div>
+            <div class="scene"
+                data-193500="top: 100%;"
+                data-194500="top: 0%" 
+                data-197500="top: 0%"
+                data-198500="top: -100%; display: block;"
+                data-198501="display: none;"
+            >
+                <img src="10_interview/03/03-a.png" alt="calendar" class="calendar">
+                <img src="10_interview/03/03-b.png" alt="vocation" class="vocation"
+                                    data-194500="opacity: 0;"
+                                    data-195000="opacity: 1;"
+                >
+                <img src="10_interview/03/03-c.png" alt="relax" class="relax"
+                                    data-195000="opacity: 0;"
+                                    data-195500="opacity: 1;"
+                >
+                <img src="10_interview/03/03-d.png" alt="picnic" class="picnic"
+                                    data-195500="opacity: 0;"
+                                    data-196000="opacity: 1;"
+                >
+                <img src="10_interview/03/03-e.png" alt="date" class="date"
+                                    data-196000="opacity: 0;"
+                                    data-196500="opacity: 1;"
+                >
+            </div>
+            <div class="scene"
+                data-197500="top: 100%;"
+                data-198500="top: 0%" 
+                data-201500="top: 0%"
+                data-202500="top: -100%; display: block;"
+                data-202501="display: none;"
+            >
+                <img src="10_interview/04/04-a.png" alt="heads" class="heads">
+                <img src="10_interview/04/04-b.png" alt="starve" class="starve"
+                                    data-198500="opacity: 0;"
+                                    data-199000="opacity: 1;"
+                >
+                <img src="10_interview/04/04-c.png" alt="roll" class="roll"
+                                    data-199000="opacity: 0;"
+                                    data-199500="opacity: 1;"
+                >
+                <img src="10_interview/04/04-d.png" alt="crazy" class="crazy"
+                                    data-199500="opacity: 0;"
+                                    data-200000="opacity: 1;"
+                >
+                <img src="10_interview/04/04-e.png" alt="arrows" class="arrows"
+                                    data-200000="opacity: 0;"
+                                    data-200500="opacity: 1;"
+                >
+            </div>
+
+            <!-- video part 2 -->
+            <div class="scene"
+                data-201500="top: 100%;"
+                data-202500="top: 0%" 
+                data-207500="top: 0%"
+                data-208500="top: -100%; display: block;"
+                data-208501="display: none;"
+            >
+                <img src="10_interview/05/05-a.png" alt="hospital" class="hospital">
+                <img src="10_interview/05/05-b.png" alt="hos-sign" class="hos-sign"
+                                    data-202500="left: 4%;"
+                                    data-203000="left: 0%;"
+                >
+                <img src="10_interview/05/05-c.png" alt="neck" class="neck"
+                                    data-203000="opacity: 0;"
+                                    data-203500="opacity: 1;"
+                >
+                <img src="10_interview/05/05-d.png" alt="eye" class="eye"
+                                    data-203500="opacity: 0;"
+                                    data-204000="opacity: 1;"
+                >
+                <img src="10_interview/05/05-e.png" alt="heart" class="heart"
+                                    data-204000="opacity: 0;"
+                                    data-204500="opacity: 1;"
+                >
+                <img src="10_interview/05/05-f.png" alt="body-cold" class="body-cold"
+                                    data-204500="opacity: 0;"
+                                    data-205000="opacity: 1;"
+                >
+                <img src="10_interview/05/05-g.png" alt="fat" class="fat"
+                                    data-205000="opacity: 0;"
+                                    data-205500="opacity: 1;"
+                >
+                <img src="10_interview/05/05-h.png" alt="no-response" class="no-response"
+                                    data-205500="opacity: 0;"
+                                    data-206000="opacity: 1;"
+                >
+                <img src="10_interview/05/05-i.png" alt="cannotsee" class="cannotsee"
+                                    data-206000="opacity: 0;"
+                                    data-206500="opacity: 1;"
+                >
+                <img src="10_interview/05/05-j.png" alt="waist" class="waist"
+                                    data-206500="opacity: 0;"
+                                    data-207000="opacity: 1;"
+                >
+            </div>
+            <div class="scene"
+                data-207500="top: 100%;"
+                data-208500="top: 0%" 
+                data-212000="top: 0%"
+                data-213000="top: -100%; display: block;"
+                data-213001="display: none;"
+            >
+                <img src="10_interview/06/06-a.png" alt="electrocardiograph" class="electrocardiograph">
+                <img src="10_interview/06/06-b.png" alt="die" class="die"
+                                    data-208500="top: 3%; opacity: 0;"
+                                    data-209500="top: 0%; opacity: 1;"
+                >
+                <img src="10_interview/06/06-c.png" alt="status" class="status"
+                                    data-209500="top: 3%; opacity: 0;"
+                                    data-210500="top: 0%; opacity: 1;"
+                >
+            </div>
+            <div class="scene"
+                data-184999="display: none;"
+                data-185000="display: block;"
+                data-202500="display: block;"
+                data-202501="display: none;"
+            >
+                <div class="vid6">
+                    <video id="video6" src="10_interview/01.webm" width="500" height="600" type="video/webm" preload="auto" loop></video>
+                </div>
+            </div>
+            <div class="scene"
+                data-202499="display: none;"
+                data-202500="display: block;"
+                data-212000="display: block;"
+                data-212001="display: none;"
+            >
+                <div class="vid7">
+                    <video id="video7" src="10_interview/02.webm" width="600" height="600" type="video/webm" preload="auto" loop></video>
+                </div>
+            </div>
+            <div class="scene"
+                data-212000="top: 100%;"
+                data-213000="top: 0%" 
+                data-217000="display: block;"
+                data-217001="display: none;"
+            >
+                <video id="videofull6" src="10_interview/03.webm" type="video/webm" preload="auto" loop></video>
+            </div>
+            <div class="scene"
+                data-216000="top: 100%;"
+                data-217000="top: 0%;" 
+            >
+                <video id="videofulllast" src="FinalTaxi.webm" type="video/webm" preload="auto"></video>
+            </div>
+            <div class="nav">
+                <ul id="navigator">
+                        <li id="part1">Part I</li>
+                        <li id="part2">Part II</li>
+                        <li id="part3">Part III</li>
+                </ul>
+            </div>
+    </div>
+
+    <script type="text/javascript" src="skrollr.min.js"></script>
+
+    <script type="text/javascript">
+    var s = skrollr.init();
+    </script>
+</body>
+<script type="text/javascript">
+    var photo0 = document.getElementById("photo0");
+    var photo1 = document.getElementById("photo1");
+    var audio0 = document.getElementById("audio0");
+    var BGM = document.getElementById("bgm");
+    var McDBGM = document.getElementById("mcdbgm");
+    var video0 = document.getElementById("video0");
+    var video1 = document.getElementById("video1");
+    var video2 = document.getElementById("video2");
+    var video3 = document.getElementById("video3");
+    var video4 = document.getElementById("video4");
+    var video5 = document.getElementById("video5");
+    var video6 = document.getElementById("video6");
+    var video7 = document.getElementById("video7");
+    var video8 = document.getElementById("video8");
+    var videofullfirst = document.getElementById("videofullfirst");
+    var videofulllast = document.getElementById("videofulllast");
+    var videofull0 = document.getElementById("videofull0");
+    var videofull1 = document.getElementById("videofull1");
+    var videofull2 = document.getElementById("videofull2");
+    var videofull3 = document.getElementById("videofull3");
+    var videofull4 = document.getElementById("videofull4");
+    var videofull5 = document.getElementById("videofull5");
+    var videofull6 = document.getElementById("videofull6");
+    var videofulltran = document.getElementById("videofulltran");
+    var num = document.getElementById("Num");
+    videofullfirst.onclick = function()
+    {
+        videofullfirst.play();
+    }
+    window.onscroll = function()
+    {
+        var t = document.documentElement.scrollTop; 
+        if( (t >= 3000 & t <= 20000) || (t >= 30000)){
+            BGM.play();
+        } else {
+            BGM.pause();
+        }
+        if( t >= 3000 ){
+            videofullfirst.pause();
+        }
+        if( t >= 7000 & t <= 9000) {
+            video0.play();
+            video0.volume = 0;
+        } else {
+            video0.pause();
+        }
+        if( t >= 9000 & t <= 10366 ){
+            photo0.style.clip = 'rect(0px, '+(10866 - t)+'px, 768px, '+(10366 - t)+'px)';
+        }
+        if( t >= 10366 & t <= 13000) {
+            videofull0.play();
+        } else {
+            videofull0.pause();
+        }
+        if( t >= 13000 & t <= 16000) {
+            audio0.play();
+        } else {
+            audio0.pause();
+        }
+        if( t >= 20000 & t <= 30000) {
+            McDBGM.play();
+        } else {
+            McDBGM.pause();
+        }
+        if( t >= 27000 & t <= 30000) {
+            videofull1.play();
+            videofull1.volume = 0;
+        } else {
+            videofull1.pause();
+        }
+        if( t >= 38000 & t <= 41000) {
+            video1.play();
+        } else {
+            video1.pause();
+        }
+        if( t >= 41000 & t <= 44000) {
+            videofull2.play();
+        } else {
+            videofull2.pause();
+        }
+        if( t >= 44000 & t <= 46500) {
+            video8.play();
+        } else {
+            video8.pause();
+        }
+        if( t >= 46500 & t <= 50000) {
+            videofull3.play();
+        } else {
+            videofull3.pause();
+        }
+        if( t >= 49000 & t <= 53000) {
+            videofull4.play();
+        } else {
+            videofull4.pause();
+        }
+        if( t >= 60000 & t <= 64000) {
+            videofull5.play();
+        } else {
+            videofull5.pause();
+        }
+        if( t >= 60500 & t <= 64000) {
+            videofull5.volume = 0.6;
+        }
+        if( t >= 74000 & t <= 75366 ){
+            photo1.style.clip = 'rect(0px, '+(75866 - t)+'px, 768px, '+(75366 - t)+'px)';
+        }
+        if( t >= 75366 & t <= 79000) {
+            video2.play();
+        } else {
+            video2.pause();
+        }
+        if( t >= 79000 & t <= 83000) {
+            video3.play();
+            video4.play();
+        } else {
+            video3.pause();
+            video4.pause();
+        }
+        if( t >= 84000 & t <= 86500) {
+            video5.play();
+        } else {
+            video5.pause();
+        }
+        if( t >= 101500 & t <= 102500 ){
+            num.innerHTML = 27660;
+        }
+        if( t >= 102500 & t <= 103000 ){
+            num.innerHTML = Math.round((8.778 * (t - 102500))+ 27660);
+        }
+        if( t >= 103000 & t <= 104500 ){
+            num.innerHTML = 32049;
+        }
+        if( t >= 104500 & t <= 105000 ){
+            num.innerHTML = Math.round((25.62 * (t - 104500))+ 32049);
+        }
+        if( t >= 105000 & t <= 106500 ){
+            num.innerHTML = 44859;
+        }
+        if( t >= 106500 & t <= 107000 ){
+            num.innerHTML = Math.round((8.856 * (t - 106500))+ 44859);
+        }
+        if( t >= 107000 & t <= 108500 ){
+            num.innerHTML = 49287;
+        }
+        if( t >= 108500 & t <= 109000 ){
+            num.innerHTML = Math.round((50.328 * (t - 108500))+ 49287);
+        }
+        if( t >= 109000 & t <= 110500 ){
+            num.innerHTML = 74451;
+        }
+        if( t >= 110500 & t <= 111000 ){
+            num.innerHTML = Math.round((12.094 * (t - 110500))+ 74451);
+        }
+        if( t >= 111000 & t <= 112500 ){
+            num.innerHTML = 80498;
+        }
+        if( t >= 112500 & t <= 113000 ){
+            num.innerHTML = Math.round((53.798 * (t - 112500))+ 80498);
+        }
+        if( t >= 113000 & t <= 114500 ){
+            num.innerHTML = 107397;
+        }
+        if( t >= 114500 & t <= 115000 ){
+            num.innerHTML = Math.round((2.714 * (t - 114500))+ 107397);
+        }
+        if( t >= 115000 & t <= 116500 ){
+            num.innerHTML = 108754;
+        }
+        if( t >= 116500 & t <= 117000 ){
+            num.innerHTML = Math.round((1.768 * (t - 116500))+ 108754);
+        }
+        if( t >= 117000 & t <= 118500 ){
+            num.innerHTML = 109638;
+        }
+        if( t >= 118500 & t <= 119000 ){
+            num.innerHTML = Math.round((137.026 * (t - 118500))+ 109638);
+        }
+        if( t >= 119000 & t <= 120500 ){
+            num.innerHTML = 178151;
+        }
+        if( t >= 120500 & t <= 121000 ){
+            num.innerHTML = Math.round((13.594 * (t - 120500))+ 178151);
+        }
+        if( t >= 121000 & t <= 122500 ){
+            num.innerHTML = 184933;
+        }
+        if( t >= 122500 & t <= 123000 ){
+            num.innerHTML = Math.round((121.41 * (t - 122500))+ 184933);
+        }
+        if( t >= 123000 & t <= 124500 ){
+            num.innerHTML = 245638;
+        }
+        if( t >= 124500 & t <= 125000 ){
+            num.innerHTML = Math.round((80.07 * (t - 124500))+ 245638);
+        }
+        if( t >= 125000 & t <= 126500 ){
+            num.innerHTML = 285673;
+        }
+        if( t >= 126500 & t <= 127000 ){
+            num.innerHTML = Math.round((89.818 * (t - 126500))+ 285673);
+        }
+        if( t >= 127000 & t <= 128500 ){
+            num.innerHTML = 330582;
+        }
+        if( t >= 128500 & t <= 129000 ){
+            num.innerHTML = Math.round((10.428 * (t - 128500))+ 330582);
+        }
+        if( t >= 129000 & t <= 131000 ){
+            num.innerHTML = 335796;
+        }
+        if( t >= 158000 & t <= 168000) {
+            videofulltran.play();
+        } else {
+            videofulltran.pause();
+        }
+        if( t >= 187500 & t <= 202500) {
+            video6.play();
+        } else {
+            video6.pause();
+        }
+        if( t >= 202500 & t <= 212000) {
+            video7.play();
+        } else {
+            video7.pause();
+        }
+        if( t >= 212000 & t <= 217000) {
+            videofull6.play();
+        } else {
+            videofull6.pause();
+        }
+        if( t >= 216000 & t <= 217000) {
+            videofull6.volume = (217000 - t)/1000;
+            videofulllast.volume = (t - 216000)/1000;
+        }
+        if( t >= 216000) {
+            videofulllast.play();
+        } else {
+            videofulllast.pause();
+        }
+    }
+    var map0 = document.getElementById("Map0");
+    map0.onclick = function()
+    {
+        document.documentElement.scrollTop = 4000;
+    }
+    var map1 = document.getElementById("Map1");
+    map1.onclick = function()
+    {
+        document.documentElement.scrollTop = 101000;
+    }
+    var map2 = document.getElementById("Map2");
+    map2.onclick = function()
+    {
+        document.documentElement.scrollTop = 101000;
+    }
+    var map3 = document.getElementById("Map3");
+    map3.onclick = function()
+    {
+        document.documentElement.scrollTop = 169000;
+    }
+    var Nav = document.getElementById("navigator");
+    var Part1 = document.getElementById("part1");
+    var Part2 = document.getElementById("part2");
+    var Part3 = document.getElementById("part3");
+    Nav.onmouseover = function()
+    {
+        Nav.style.top = "0%";
+    }
+    Nav.onmouseout = function()
+    {
+        Nav.style.top = "-70%";
+    }
+    Part1.onclick = function()
+    {
+        document.documentElement.scrollTop = 4000;
+    }
+    Part1.onmouseover = function()
+    {
+        Part1.style.color = "yellow";
+        Part1.style.borderColor = "yellow";
+    }
+    window.onmouseout = function()
+    {
+        Part1.style.color = "white";
+        Part1.style.borderColor = "white";
+        Part2.style.color = "white";
+        Part2.style.borderColor = "white";
+        Part3.style.color = "white";
+        Part3.style.borderColor = "white";
+    }
+    Part2.onclick = function()
+    {
+        document.documentElement.scrollTop = 91000;
+    }
+    Part2.onmouseover = function()
+    {
+        Part2.style.color = "yellow";
+        Part2.style.borderColor = "yellow";
+    }
+    Part3.onclick = function()
+    {
+        document.documentElement.scrollTop = 159000;
+    }
+    Part3.onmouseover = function()
+    {
+        Part3.style.color = "yellow";
+        Part3.style.borderColor = "yellow";
+    }
+</script>
+</html>
